@@ -4,7 +4,7 @@
   "description": "Este projeto é a implementação do https://www.tabnews.com.br/ para https://curso.dev/ do Felipe Deschamps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev"
   },
   "author": "",
   "license": "MIT",
@@ -12,5 +12,10 @@
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.35",
+    "typescript": "5.0.4"
   }
 }
