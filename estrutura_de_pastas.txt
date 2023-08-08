@@ -1,0 +1,23 @@
+.
+└── .
+    ├── README.md
+    ├── estrutura_de_pastas.txt
+    ├── infra
+    │   ├── database.js
+    │   ├── migrations
+    │   └── provisioning
+    │       ├── production
+    │       └── staging
+    ├── models
+    │   ├── content.ts
+    │   ├── password.ts
+    │   └── user.ts
+    ├── next-env.d.ts
+    ├── package-lock.json
+    ├── package.json
+    ├── pages
+    │   └── index.tsx
+    ├── tests
+    └── tsconfig.json
+
+5 directories, 15 files
