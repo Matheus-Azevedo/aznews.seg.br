@@ -1,4 +1,4 @@
-function Home(): JSX.Element {
+function Home() {
   return (
     <section>
       <h1>Projeto AZNEWS</h1>
