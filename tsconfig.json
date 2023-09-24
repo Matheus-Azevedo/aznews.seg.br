@@ -22,7 +22,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "infra/database.js"
+    "infra/database.js",
+    "models/user.js",
+    "models/password.js",
+    "models/content.js"
   ],
   "exclude": [
     "node_modules"
