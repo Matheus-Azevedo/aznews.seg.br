@@ -1,16 +1,33 @@
 const url = "http://localhost:3000/api/v1/status";
 
 describe("GET /api/v1/status", () => {
-  test('should return 200 and { status: "OK" }', async () => {
+  test("should return 200", async () => {
     const response = await fetch(url);
     expect(response.status).toBe(200);
   });
-  test('should return a body { status: "OK", message: "API is running - CURSO.DEV is awesome!" }', async () => {
+
+  test("Should return a JSON with updated_at", async () => {
     const response = await fetch(url);
-    const body = await response.json();
-    expect(body).toEqual({
-      status: "OK",
-      message: "API is running - CURSO.DEV is awesome!",
-    });
+    const responseBody = await response.json();
+    const updatedAt = new Date(responseBody.updated_at).toISOString();
+    expect(responseBody.updated_at).toBe(updatedAt);
+  });
+
+  test("Should return a JSON with database information - Version", async () => {
+    const response = await fetch(url);
+    const responseBody = await response.json();
+    expect(responseBody.dependencies.database.version).toEqual("16.0");
+  });
+
+  test("Should return a JSON with database information - Max Connections", async () => {
+    const response = await fetch(url);
+    const responseBody = await response.json();
+    expect(responseBody.dependencies.database.max_connections).toEqual(100);
+  });
+
+  test("Should return a JSON with database information - Used Connections", async () => {
+    const response = await fetch(url);
+    const responseBody = await response.json();
+    expect(responseBody.dependencies.database.openedConnections).toEqual(1);
   });
 });
