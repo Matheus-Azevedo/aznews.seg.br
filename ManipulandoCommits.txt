@@ -1,1 +1,0 @@
-Gerando commits para testar o ambiente preview da Vercel
